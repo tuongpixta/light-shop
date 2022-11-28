@@ -43,6 +43,7 @@ export default function ForgotPassword() {
             padding={2}
             display="flex"
             alignItems="center"
+            justifyContent="center"
           >
             <Stack alignItems="center" gap={2} maxWidth={600} flex={1}>
               <h1 className="d-flex gap-2 m-0">
