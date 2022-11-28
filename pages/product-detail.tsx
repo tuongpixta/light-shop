@@ -162,7 +162,7 @@ const Home = () => {
                     textTransform: "capitalize",
                   }}
                 >
-                  Theem vafo gio
+                  Thêm vào giỏ
                 </Button>
                 <Box borderBottom="1px solid #dddd" mt={4} />
                 <p>Vui long lien he</p>
