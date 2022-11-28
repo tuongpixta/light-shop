@@ -16,6 +16,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import Head from "next/head";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import GoogleIcon from "@mui/icons-material/Google";
+import Link from "next/link";
 
 export default function LoginPage() {
   return (
@@ -141,9 +142,9 @@ export default function LoginPage() {
               </Stack>
               <Box>
                 Bạn đã có tài khoản?{" "}
-                <a href="/login" className="text-primary">
+                <Link href="/login" className="text-primary">
                   Đăng nhập
-                </a>
+                </Link>
               </Box>
             </Stack>
           </Box>
