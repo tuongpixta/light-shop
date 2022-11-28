@@ -27,34 +27,58 @@ import Products from "../components/Products";
 
 const Home = () => {
   const [count, setCount] = useState(0);
-  const products1: ProductProps[] = Array(4).fill(null);
+  const products1: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/prod2.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/pro3.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/pro4.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/prod5.png",
+    price: 200000,
+    discount: 20,
+  }
+  ];
 
   const handleIncrease = () => setCount((prev) => prev + 1);
   const handleDecrease = () => setCount((prev) => prev - 1);
 
   const categories = [
-    "Khuyen mai",
-    "san pham moi",
-    "den led",
-    "den tuyt",
-    "den led panel",
-    "den pha led",
+    "KHUYẾN MÃI",
+    "SẢN PHẨM MỚI",
+    "ĐÈN LED BÚP",
+    "ĐÈN TUÝP LED",
+    "ĐÈN LED PANEL",
+    "ĐÈN PHA LED",
   ];
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/">
-      Trang Chur
+      Trang Chủ
     </Link>,
     <Link underline="hover" key="2" color="inherit" href="/">
-      khuyen mai
+      khuyến mãi
     </Link>,
     <Typography key="3" color="primary">
-      Den ban vintage
+      Đèn bàn vintage
     </Typography>,
   ];
 
   const product: ProductProps = {
-    name: "Den ban",
-    img: "/img/bg-login.png",
+    name: "Đèn bàn vintage",
+    img: "/img/products/prod2.png",
     price: 2400000,
     discount: 0,
   };
@@ -95,7 +119,7 @@ const Home = () => {
               display="flex"
             >
               <Stack gap={2} flex={1}>
-                <h2 className="m-0">Khuyen mai</h2>
+                <h2 className="m-0">KHUYẾN MẠI</h2>
                 <Typography
                   className="text-primary"
                   fontSize={34}
@@ -104,13 +128,14 @@ const Home = () => {
                   {product.name}
                 </Typography>
                 <Rating name="read-only" value={4} readOnly />
-                <span>Coong suaat</span>
-                <span>Coong suaat</span>
-                <span>Coong suaat</span>
-                <span>Coong suaat</span>
-                <span>Coong suaat</span>
-                <span>Coong suaat</span>
-                <span>Coong suaat</span>
+                <span>Công suất:7W</span>
+                <span>Điện áp:220V/50Hz</span>
+                <span>Nhiệt độ màu:6500k/3000k</span>
+                <span>Quang thông:560Im</span>
+                <span>Góc phát hiện của Rada:90 độ</span>
+                <span>Chiều cao lắp đặt:(2.8-3.5)m</span>
+                <span>Đường kính khoét trần:90mm</span>
+                <span>Kích thước(ØxC):(110×51)mm</span>
                 <Box borderBottom="1px solid #dddd" mt={4} />
                 <Typography
                   className="text-primary"
@@ -148,39 +173,48 @@ const Home = () => {
                   className="text-primary"
                 >
                   <LocalPhoneOutlinedIcon />
-                  <span>0999888777</span>
+                  <span>0532262666</span>
                 </Stack>
               </Stack>
             </Box>
           </Stack>
           <Box borderBottom="1px solid #dddd" mt={4} />
           <Box mb={5}>
-            <h1>Moo tar</h1>
+            <h1>Mô tả</h1>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            Đèn bàn vintage Rạng Đông là giải pháp hiệu quả trong mùa dịch Covid-19. Ngoài khả năng chiếu sáng vượt trội, đèn còn mang đến khả năng diệt sạch virus trong không khí lên tới 99%. Sản phẩm là giải pháp chiếu sáng vô cùng cần thiết nhằm đảm bảo an toàn sức khỏe cho gia đình bạn.
+Cấu tạo đèn diệt khuẩn rạng đông
+<br/>
+– Tích hợp Chip LED UV-C khi bật sẽ tiêu diệt 99.9% vi sinh vật có hại.
+<br/>
+– Tích hợp công nghệ cảm biến radar, đèn hoạt động thông minh với 2 chế độ tiện ích:
+<br/>
++ Tự động sáng như đèn thường khi có người và bật chế độ khử khuẩn khi người rời đi (Chế độ tự động).
+<br/>
++ Người dùng cũng có thể tùy ý sử dụng đèn thường hay đèn khử khuẩn bằng công tắc ON/OFF (Chế độ thủ công).
+<br/>
+– Không chỉ hoạt động như đèn  khử khuẩn, đèn Downlight diệt khuẩn Rạng Đông còn được dùng với chế độ chiếu sáng thông thường bởi:
+<br/>
+– Thiết kế tinh tế hiện đại.
+<br/>
+– 2 màu ánh sáng trắng 6500K và vàng 3500K để khách hàng lựa chọn cho các không gian khác nhau chẳng hạn như phòng khách hay phòng ngủ.
+<br/>
+– Lắp cố định trên trần nhà, không phải cầm di chuyển nhiều nơi.
+
             </p>
           </Box>
           <Box mb={5}>
-            <h1>Danh gia</h1>
-            <p>Chua co danh gia</p>
+            <h1>Đánh giá</h1>
+            <p>Chưa có đánh giá nào.</p>
             <fieldset className="p-2">
-              <h2>Hay la ng d</h2>
-              <p>dang gia cua b</p>
+              <h2>Hãy là người đầu tiên nhận xét “Đèn bàn vintage”</h2>
+              <p>Đánh giá của bạn</p>
 
               <Rating name="read-only" value={4} />
               <Stack direction="row" gap={3}>
                 <TextField
                   id="outlined-basic"
-                  label="Tên Đăng Nhập"
+                  label="Tên"
                   variant="outlined"
                   sx={{
                     marginTop: 2,
@@ -189,7 +223,7 @@ const Home = () => {
                 />
                 <TextField
                   id="outlined-basic"
-                  label="Tên Đăng Nhập"
+                  label="Email"
                   variant="outlined"
                   sx={{
                     marginTop: 2,
@@ -200,7 +234,7 @@ const Home = () => {
 
               <TextField
                 id="outlined-multiline-static"
-                label="Multiline"
+                label="Nhận xét của bạn"
                 multiline
                 rows={4}
                 fullWidth
@@ -208,18 +242,18 @@ const Home = () => {
               />
               <FormControlLabel
                 control={<Checkbox defaultChecked />}
-                label="Luu ten cua toi"
+                label="Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi"
                 sx={{
                   width: "100%",
                   marginBottom: 1,
                 }}
               />
               <Button variant="contained" color="primary">
-                Guwri
+                Gửi
               </Button>
             </fieldset>
           </Box>
-          <Products title="Cas sp tuowng tu" products={products1} />
+          <Products title="Các sản phẩm tương tự" products={products1} />
         </Box>
         <Footer />
       </Box>
