@@ -31,7 +31,7 @@ export default function LoginPage() {
             alignItems="center"
           >
             <Stack alignItems="center" gap={2} maxWidth={600} flex={1}>
-            <h1 className="m-0">-Đăng Nhập</h1>
+              <h1 className="m-0">-Đăng Nhập</h1>
               <p>Xin chào, vui lòng điền vào thông tin đăng nhập</p>
               <TextField
                 id="outlined-basic"
