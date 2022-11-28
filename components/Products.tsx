@@ -18,7 +18,13 @@ const Products: FC<Props> = (props) => {
         <Button
           variant="outlined"
           color="primary"
-          sx={{ position: "absolute", top: 0, right: 0, marginRight: 2 }}
+          sx={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            marginRight: 2,
+            textTransform: "capitalize",
+          }}
         >
           Xem tất cả &gt;&gt;
         </Button>

@@ -1,9 +1,23 @@
-import { Box, Button, IconButton, Stack, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
+import Visibility from "@mui/icons-material/Visibility";
 import Head from "next/head";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import GoogleIcon from "@mui/icons-material/Google";
+import Router from "next/router";
+import Link from "next/link";
 
-export default function LoginPage() {
+export default function ForgotPassword() {
   return (
     <div>
       <Head>
@@ -31,7 +45,12 @@ export default function LoginPage() {
             alignItems="center"
           >
             <Stack alignItems="center" gap={2} maxWidth={600} flex={1}>
-              <h1 className="m-0">-Đăng Nhập</h1>
+              <h1 className="d-flex gap-2 m-0">
+                <Typography fontSize={30} sx={{ color: "#FFB744" }}>
+                  DAISYLIGHT
+                </Typography>
+                -<Typography fontSize={30}>Đăng Nhập</Typography>
+              </h1>
               <p>Xin chào, vui lòng điền vào thông tin đăng nhập</p>
               <TextField
                 id="outlined-basic"
@@ -42,14 +61,26 @@ export default function LoginPage() {
                   width: "100%",
                 }}
               />
-              <TextField
-                id="outlined-basic"
-                label="Mật khẩu"
-                variant="outlined"
-                sx={{
-                  width: "100%",
-                }}
-              />
+              <FormControl sx={{ m: 1 }} fullWidth variant="outlined">
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Mật khẩu
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type="password"
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        edge="end"
+                      >
+                        <Visibility />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
               <Button
                 variant="contained"
                 color="primary"
@@ -57,13 +88,14 @@ export default function LoginPage() {
                 sx={{
                   marginTop: 3,
                 }}
+                onClick={() => Router.push("/")}
               >
                 ĐĂNG NHẬP
               </Button>
               <Box textAlign="right" width="100%">
-                <a href="/quen-mat-khau" className="text-primary">
+                <Link href="/forgotpassword">
                   <small>Quên mật khẩu?</small>
-                </a>
+                </Link>
               </Box>
               <Box textAlign="center">
                 <small>Hoặc</small>
@@ -78,9 +110,9 @@ export default function LoginPage() {
               </Stack>
               <Box>
                 Bạn chưa có tài khoản?{" "}
-                <a href="/register" className="text-primary">
+                <Link className="text-primary" href="/register">
                   Đăng ký ngay
-                </a>
+                </Link>
               </Box>
             </Stack>
           </Box>

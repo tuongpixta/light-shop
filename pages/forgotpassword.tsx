@@ -1,7 +1,16 @@
-import { Box, Button, Checkbox, IconButton, Stack, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Checkbox,
+  IconButton,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Head from "next/head";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import GoogleIcon from "@mui/icons-material/Google";
+import Router from "next/router";
 
 export default function LoginPage() {
   return (
@@ -31,30 +40,19 @@ export default function LoginPage() {
             alignItems="center"
           >
             <Stack alignItems="center" gap={2} maxWidth={600} flex={1}>
-            <h1 className="m-0">-Đổi mật khẩu</h1>
-              <p>Vui lòng nhập tên đăng nhập và mật khẩu để đổi mật khẩu của bạn.</p>
+              <h1 className="d-flex gap-2 m-0">
+                <Typography fontSize={30} sx={{ color: "#FFB744" }}>
+                  DAISYLIGHT
+                </Typography>
+                -<Typography fontSize={30}>Quên mật khẩu</Typography>
+              </h1>
+              <p>Vui lòng nhập email để lấy lại mật khẩu của bạn.</p>
               <TextField
                 id="outlined-basic"
-                label="Tên Đăng Nhập"
+                label="Email"
                 variant="outlined"
                 sx={{
                   marginTop: 2,
-                  width: "100%",
-                }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Nhập mật khẩu cũ"
-                variant="outlined"
-                sx={{
-                  width: "100%",
-                }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Nhập mật khẩu mới"
-                variant="outlined"
-                sx={{
                   width: "100%",
                 }}
               />
@@ -65,8 +63,9 @@ export default function LoginPage() {
                 sx={{
                   marginTop: 3,
                 }}
+                onClick={() => Router.push("/login")}
               >
-               ĐỔI MẬT KHẨU
+                Lấy lại mật khẩu
               </Button>
             </Stack>
           </Box>

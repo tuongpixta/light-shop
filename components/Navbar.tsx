@@ -10,6 +10,7 @@ import {
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import Link from "next/link";
 
 const Navbar: FC = () => {
   return (
@@ -33,13 +34,15 @@ const Navbar: FC = () => {
             backgroundColor: "#eee7",
           }}
         >
-          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="TIM KIEM" />
+          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Tìm kiếm" />
           <IconButton type="button" aria-label="search">
             <SearchIcon />
           </IconButton>
         </Paper>
         <Stack direction="row" gap={2}>
-          <PersonOutlinedIcon />
+          <Link href="/login">
+            <PersonOutlinedIcon />
+          </Link>
           <ShoppingCartOutlinedIcon />
         </Stack>
       </Stack>

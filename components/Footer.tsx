@@ -3,6 +3,8 @@ import { Box, Stack, Typography } from "@mui/material";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import GoogleIcon from "@mui/icons-material/Google";
 
 const Footer: FC = () => {
   return (
@@ -15,7 +17,13 @@ const Footer: FC = () => {
         maxWidth={1024}
         m="auto"
       >
-        <img src="/img/logo.png" alt="logo" />
+        <Stack mt={3} gap={2}>
+          <img src="/img/logo.png" alt="logo" className="img-fit" />
+          <Stack direction="row" gap={3} justifyContent="center">
+            <FacebookOutlinedIcon />
+            <GoogleIcon />
+          </Stack>
+        </Stack>
         <Stack gap={2}>
           <h2>Contact Info</h2>
           <Box display="flex" flexDirection="row" alignItems="center" gap={1}>

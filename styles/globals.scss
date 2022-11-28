@@ -19,8 +19,15 @@ a {
   padding: 24px;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .m-0 {
   margin: 0;
+}
+.gap-2 {
+  gap: 12px;
 }
 
 .img-fluid {
