@@ -23,7 +23,7 @@ const Navbar: FC = () => {
         maxWidth={1024}
         m="auto"
       >
-        <img src="" alt="logo" />
+        <img src="/img/logo.png" alt="logo" />
         <Paper
           component="form"
           sx={{

@@ -15,34 +15,34 @@ const Footer: FC = () => {
         maxWidth={1024}
         m="auto"
       >
-        <img src="" alt="logo" />
+        <img src="/img/logo.png" alt="logo" />
         <Stack gap={2}>
-          <h2>Contact</h2>
+          <h2>Contact Info</h2>
           <Box display="flex" flexDirection="row" alignItems="center" gap={1}>
             <LocalPhoneOutlinedIcon />
-            0988777777
+            +84 919 163 981
           </Box>
           <Box display="flex" flexDirection="row" alignItems="center" gap={1}>
             <EmailOutlinedIcon />
-            0988777777
+            daisylight@gmail.com
           </Box>
           <Box display="flex" flexDirection="row" alignItems="center" gap={1}>
             <LocationOnOutlinedIcon />
-            0988777777
+            96 Định Công, Hoàng Mai, Hà Nội
           </Box>
         </Stack>
         <Stack gap={2}>
-          <h2>Danh mucj sp</h2>
-          <span>Den led</span>
-          <span>Den led</span>
-          <span>Den led</span>
-          <span>Den led</span>
+          <h2>Danh mục sản phẩm</h2>
+          <span>ĐÈN LED BÚP</span>
+          <span>ĐÈN TUYP LED</span>
+          <span>ĐÈN LED PANEL</span>
+          <span>ĐÈN PHA LED</span>
         </Stack>
         <Stack gap={2}>
-          <h2>Thong tin</h2>
-          <span>Den led</span>
-          <span>Den led</span>
-          <span>Den led</span>
+          <h2>Thông tin</h2>
+          <span>Quy định sử dụng</span>
+          <span>Mẫu hợp đồng</span>
+          <span>Profile</span>
         </Stack>
       </Stack>
       <Box maxWidth={1024} paddingX={2} m="auto">

@@ -20,7 +20,7 @@ const Products: FC<Props> = (props) => {
           color="primary"
           sx={{ position: "absolute", top: 0, right: 0, marginRight: 2 }}
         >
-          Xem taast ca &gt;&gt;
+          Xem tất cả &gt;&gt;
         </Button>
         <Stack direction="row" gap={2} flexWrap="wrap" justifyContent="center">
           {products.map((product, index) => (

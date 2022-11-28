@@ -8,16 +8,163 @@ import Products from "../components/Products";
 
 export default function Home() {
   const categories = [
-    "Khuyen mai",
-    "san pham moi",
-    "den led",
-    "den tuyt",
-    "den led panel",
-    "den pha led",
+    "KHUYẾN MÃI",
+    "SẢN PHẨM MỚI",
+    "ĐÈN LED BÚP",
+    "ĐÈN TUÝP LED",
+    "ĐÈN LED PANEL",
+    "ĐÈN PHA LED",
   ];
-  const products1: ProductProps[] = Array(4).fill(null);
-  const products2: ProductProps[] = Array(4).fill(null);
-
+  const products1: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/prod2.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/pro3.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/pro4.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/prod5.png",
+    price: 200000,
+    discount: 20,
+  }
+  ];
+  const products2: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/prod6.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/prod7.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/prod8.png",
+    price: 200000,
+    discount: 20,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/pro4.png",
+    price: 200000,
+    discount: 20,
+  }
+  ];
+  const products3: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/pro9.png",
+    price: 200000,
+    discount:0,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/pro9.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/pro9.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/pro9.png",
+    price: 200000,
+    discount: 0,
+  }
+  ];
+  const products4: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/led.png",
+    price: 200000,
+    discount:0,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/led.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/led.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/led.png",
+    price: 200000,
+    discount: 0,
+  }
+  ];
+  const products5: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/panel.png",
+    price: 200000,
+    discount:0,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/panel.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/panel.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/panel.png",
+    price: 200000,
+    discount: 0,
+  }
+  ];
+  const products6: ProductProps[] = [{
+    name: "Đèn bàn vintage",
+    img: "/img/products/pha.png",
+    price: 200000,
+    discount:0,
+  },
+  {
+    name: "Đèn cổ điển",
+    img: "/img/products/pha.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn treo thủy tinh",
+    img: "/img/products/pha.png",
+    price: 200000,
+    discount: 0,
+  },
+  {
+    name: "Đèn đồng thau",
+    img: "/img/products/pha.png",
+    price: 200000,
+    discount: 0,
+  }
+  ];
   return (
     <div>
       <Head>
@@ -29,10 +176,14 @@ export default function Home() {
         <Header categories={categories} />
         <Navbar />
         <Box maxHeight={400} overflow="hidden">
-          <img src="https://picsum.photos/200/300" className="img-fluid" />
+          <img src="/img/bg-menu.png" className="img-fluid" />
         </Box>
-        <Products title="Khuyen mai" products={products1} />
-        <Products title="San pham moi" products={products2} newProduct />
+        <Products title="KHUYẾN MÃI" products={products1} />
+        <Products title="SẢN PHẨM MỚI" products={products2} newProduct />
+        <Products title="ĐÈN LED BÚP" products={products3} />
+        <Products title="ĐÈN TUÝT LED" products={products4} />
+        <Products title="ĐÈN PANEL" products={products5} />
+        <Products title="ĐÈN PHA LED" products={products6} />
         <Footer />
       </Box>
     </div>
